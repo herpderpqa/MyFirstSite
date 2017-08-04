@@ -1,60 +1,108 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Introduction to HTML</title>
-<link href="css/styles.css" rel="stylesheet">
-</head>
+<!DOCTYPE html>
+<html>
+<title>CnC Store</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Playfair Display";
+    letter-spacing: 5px;
+}
+</style>
 <body>
-<header role="banner">
-  <h1>HTML Essential Training Bacon 952pm</h1>
-  <h2>Introduction to HTML</h2>
-  <nav role="navigation">
-    <ul>
-      <li><a href="intro.htm" title="Introduction to HTML">Introduction to HTML</a></li>
-      <li><a href="syntax.htm" title="HTML syntax">HTML syntax</a></li>
-      <li><a href="structure.htm" title="Structuring pages">Structuring pages</a></li>
-      <li><a href="links.htm" title="Creating links">Creating links</a></li>
-      <li><a href="reference.htm" title="HTML Reference">HTML reference</a></li>
-      <li><a href="next.htm" title="Next steps">Next steps</a></li>
-    </ul>
-  </nav>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card-2" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">C&Cs Homemade cricut and baking</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">CriCut</a>
+      <a href="#menu" class="w3-bar-item w3-button">Baking</a>
+      <a href="#menu" class="w3-bar-item w3-button">Baking</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image" src="/w3images/hamburger.jpg" alt="Hamburger Catering" width="1600" height="800">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+    <h1 class="w3-xxlarge">Cricut Sample</h1>
+  </div>
 </header>
-<main role="main">
-  <article role="article">
-    <header>
-      <p><img src="images/tags.png" alt="HTML" width="310" height="375" class="flowRight">HTML, or <b>Hypertext Markup Language</b>, is the language used to describe the structure of content on the web. As with other markup languages, it uses tags to identify page elements and describe the page&rsquo;s semantic structure. An easy way to visualize this is to consider the various types of documents you see on a day-to-day basis, like magazine and newspaper articles or documents created in a program like Microsoft Word. The formatting of those documents ensures that the information is presented clearly, with a distinct hierarchy. This allows readers to quickly scan the page and determine which information is important and how the content relates to each other. HTML allows us to do that for web pages by first establishing the overall document structure, and then formatting elements like headings and paragraphs.</p>
-    </header>
-    <section>
-      <h3>History</h3>
-      <p>HTML can trace its roots back to 1989 at <b>CERN</b>, the European Laboratory for Particle Physics. There, Tim Berners-Lee came up with the idea of having scientists from around the world collaborate on research. His idea was rather than simply making documents available on a server as many people were doing at the time, the documents themselves should be able to link to one another, in a way that would enhance collaboration and make information easier to find and more accessible. From this idea Tim created HTML (based off SGML, an earlier markup language) to format pages and HTTP (or Hypertext Transfer Protocol) to transfer them from one computer to another. Although the world didn&rsquo;t quite realize it yet, the World Wide Web was born.</p>
-      <p>As the popularity of the web increased in the early 90s, HTML underwent a series of rapid changes. Browser manufacturers like Netscape and Microsoft started to develop their own proprietary tags, and development bodies like the IETF (the Internet Engineering Task Force) and the W3C (the World Wide Web Consortium) were finding it difficult to gain traction with the standardization process of HTML. By 1995, the W3C created an editorial review board for HTML that included members of the W3C as well as representatives from browser developers and other organizations. This collaborative board had a major impact in stabilizing the HTML standard and reducing the uneven implementations that had plagued earlier browsers. </p>
-      <p>This resulted in the HTML 4.0 specification being released in 1998. It was the most stable version of HTML up to that point, and formalized many of the improvements made to HTML over the years. It&rsquo;s still the most widely used version of HTML and remains the baseline for authors and implementers alike.</p>
-      <p>Around the time that HTML 4.0 was published, a movement began to evolve HTML towards a more flexible style of markup language. Although authors had tried to anticipate the tags necessary to markup documents, the spread of the World Wide Web and the diversity of user agents made keeping up with requirements difficult. In the eyes of many, migrating to a markup language like XML, which allows authors to create their own tags to represent content, would alleviate those concerns and allow HTML to evolve organically. XML also contains stricter formatting rules than HTML, and a sizable number of authors and developers found HTML&rsquo;s lax parsing rules problematic. This effort resulted in the publishing of the XHTML 1.0 specification in 2000. Although it was not a dramatic departure from HTML 4.0, it did introduce new syntax rules to conform to XML requirements and eliminated the HTML elements that were seen to be dictating the presentation of content rather than the structure of it. </p>
-      <p><img src="images/200px-W3C_Icon.png" alt="W3C logo" width="200" height="136" class="flowLeft">Shortly after the 1.0 specification was published, work began on XHTML 2.0, which was to move HTML further towards XML. XHTML 2.0 was a dramatic departure from previous versions of HTML and was never able to gain any traction among browser developers. The specification languished for years in the W3C before its charter was revoked in 2009, essentially ending development.</p>
-      <p> While the W3C was taking HTML down the XHTML path, a group of authors, developers, and organizations became frustrated with the lack of progress on updating HTML. This group decided to evolve HTML independently of the W3C and formed the Web Hypertext Application Technology Working Group (or <b>WHATWG</b>) in 2004. They began work on the Web Applications 1.0 standard, which extended HTML 4.0, adding clear parsing rules for user agents and creating APIs to make developing web applications easier. The W3C, realizing that XHTML 2.0 faced significant hurdles in adoption, began working with the WHATWG and began to jointly develop the new standard with them in 2008. Currently the W3C works on publishing a stable version of the specification, while the WHATWG continues to work on what they call a &ldquo;living standard&rdquo; of the specification. As a living standard, they&rsquo;ve removed the version number and simply refer to it as &ldquo;HTML.&rdquo;</p>
-    </section>
-    <section>
-      <h3>HTML timeline</h3>
-      <ol>
-        <li><b>1991</b>: Tim Berners-Lee publishes &ldquo;HTML Tags&rdquo; which describes the initial 18 elements of HTML</li>
-        <li><b>1992</b>: NCSA develops the Mosaic browser, which will eventually evolve into Netscape</li>
-        <li><b>1994</b>: The Internet Engineering Task Force (IETF) creates an HTML working group to develop HTML specifications. Later that year the W3C was created to foster an open standards environment</li>
-        <li><b>1995</b>: HTML 2.0 specification is published</li>
-        <li><b>1995</b>: Microsoft releases Internet Explorer to compete with Netscape</li>
-        <li><b>1997</b>: HTML 3.2 specification is published</li>
-        <li><b>1997</b>: HTML 4.0 specification is published</li>
-        <li><b>2000</b>: XHTML 1.0 is published as a W3C recommendation</li>
-        <li><b>2004</b>: The WHATWG forms to continue work on HTML</li>
-        <li><b>2006</b>: W3C announces it will work with the WHATWG on HTML5</li>
-        <li><b>2009</b>: XHTML Working Group charter expires</li>
-        <li><b>2012</b>: W3C and WHATWG announce they will develop the HTML5 standard separately</li>
-      </ol>
-    </section>
-  </article>
-</main>
-<footer role="contentinfo">
-  <p>&copy; <a href="http://www.lynda.com" title="lynda.com" target="_blank">lynda.com</a> | follow me and lynda.com on Twitter! <a href="https://twitter.com/jameswillweb" title="Follow me on Twitter">@jameswillweb</a> <a href="https://twitter.com/lynda" title="Follow lynda.com on Twitter">@lynda</a></p>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="/w3images/tablesetting2.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+    
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">About C&C Cricut and baking</h1><br>
+      <h5 class="w3-center">Early hobby started 8/3/2017</h5>
+      <p class="w3-large">Christine and myself (Charles) have started a website to showcase our homeade cricuts and baking desssert. My wife moreso makes the everything and I maintain the site.</p>
+      <p class="w3-large w3-text-grey w3-hide-medium">The name of our site is taken after our two dogs Penny and Jax</p>
+    </div>
+  </div>
+  
+  <hr>
+  
+  <!-- Menu Section -->
+  <div class="w3-row w3-padding-64" id="menu">
+    <div class="w3-col l6 w3-padding-large">
+      <h1 class="w3-center">Our Menu(Prototype Test)</h1><br>
+      <h4>Bread Basket</h4>
+      <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
+    
+      <h4>Honey Almond Granola with Fruits</h4>
+      <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
+    
+      <h4>Belgian Waffle</h4>
+      <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br>
+    
+      <h4>Scrambled eggs</h4>
+      <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
+    
+      <h4>Blueberry Pancakes</h4>
+      <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>    
+    </div>
+    
+    <div class="w3-col l6 w3-padding-large">
+      <img src="/w3images/tablesetting.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu" width="500" height="750">
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-64" id="contact">
+    <h1>Contact</h1><br>
+    <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>
+    <p class="w3-text-blue-grey w3-large"><b>Catering Service, 42nd Living St, 43043 New York, NY</b></p>
+    <p>You can also contact us by phone 00553123-2323 or email catering@catering.com, or you can send us a message here:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="w3-input w3-padding-16" type="datetime-local" placeholder="Date and time" required name="date" value="2017-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-light-grey w3-section" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+  
+<!-- End page content -->
+</div>
+
+<!-- Footer
+<footer class="w3-center w3-light-grey w3-padding-32">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
+-->
 </body>
 </html>
