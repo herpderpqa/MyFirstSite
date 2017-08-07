@@ -4,7 +4,23 @@ h1,h2,h3,h4,h5,h6 {
     font-family: "Playfair Display";
     letter-spacing: 5px;
 }
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 
+.navbar a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
 html, body {
 	/*background: #F24308; /* Beccapurple */
 	margin: 0;
@@ -15,6 +31,9 @@ h1, h2, h3, h4, h5, h6, p {
 }
 h1, h2, h3, h4, h5, h6 {
 	color: rgb(107, 107, 132);
+}
+.waffles{
+    position: sticky;
 }
 div.bottom
         {
@@ -38,7 +57,7 @@ div.bottom
 }
 #home-banner{
 	 text-align: center;
-	 padding: 10px;
+	 padding: 30px;
 }
 .col-md-4{
     -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
@@ -56,7 +75,7 @@ div.bottom
     margin: auto;
     width: 50%;
     /*border: 3px solid green;*/
-    padding: 10px;
+    padding: 30px;
 }
 footer {
 	border-top: 1px solid gray;
